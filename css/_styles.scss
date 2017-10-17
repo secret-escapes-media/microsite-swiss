@@ -1,0 +1,28 @@
+// general styles for the project that wouldn't be a reuseable component
+
+.bg {
+  &--grey-dark      { background-color: $grey-dark; }
+  &--grey-lightest  { background-color: $grey-lightest; }
+  &--beige          { background-color: $s-beige; }
+  &--swiss-promo {
+    background-image: url('../img/content/swiss-promo.jpg');
+    background-color: #3d5e7b;
+    @include background-attributes;
+  }
+  &--ski-promo {
+    background-image: url('../img/content/ski-promo.jpg');
+    background-color: #304453;
+    @include background-attributes;
+  }
+}
+
+.border {
+  border-bottom: solid 3px $s-red;
+  &--sm { border-bottom: solid 1px $s-red; }
+ }
+
+.content-bg {
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+}

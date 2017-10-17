@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+{% include page/banner.html %}
+
+<div class="page__content">
+
+  <div class="section bg--grey-lightest">
+    <div class="row row--padding row--xl text--center">
+      <p class="text--xl">{{page.intro}}</p>
+      <a href="{{site.client.link}}" class="btn btn--red-outline">Book Now</a>
+    </div>
+  </div>
+
+  {% for content in page.contents %}
+  <div class="vpad--xl content-bg" style="background-image: url('{{site.baseurl}}/img/content/{{page.id}}/{{content.title | slugify}}-bg.jpg');">
+    <div class="row row--padding">
+      <div class="vpad--xl">
+        <div class="bob {% cycle: '', ' bob--swap' %}">
+          <div class="bob__image">
+            <div class="bg-img bg-img--1-1" style="background-image: url('{{site.baseurl}}/img/content/{{page.id}}/{{content.title | slugify}}.jpg');"></div>
+          </div>
+          <div class="bob__text">
+            <div class="title title--line title--lg"><span class="title--line-wrap">{{content.title}}</span></div>
+            <p class="text--lg">{{content.lead-para}}</p>
+            <p>{{content.para}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+
+  {% include components/swiss-promo.html %}
+
+</div>

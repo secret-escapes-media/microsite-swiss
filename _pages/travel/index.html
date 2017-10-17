@@ -1,0 +1,97 @@
+---
+layout: standard
+id: travel
+nav-order: 3
+title: Travel
+intro: Your holiday shouldn’t start when you arrive at your hotel, it should begin when you check-in at the airport. Comfort starts here, with airport lounges catering to the most discerning of travellers, and offering luxury without bounds. In-flight, the service continues, with a range of great perks to make your journey as relaxed as possible. This is Swiss hospitality.
+
+lounges:
+
+  - title: Zurich Lounge
+    lead-para: Pure luxury awaits at the SWISS Zurich lounge at Zurich airport.
+    para: From two hotel rooms, conference room, mini suites, champagne bar and two restaurants, SWISS supplies everything you could possibly need. A wine humidor offers over 1000 bottles from all over the world, a perfect accompaniment to the à la carte selections on offer. The Senator Lounge has its own whisky bar with over 120 different tipples, and chefs are on call to cook in front of wherever you choose to rest. Just don’t forget about the flight!
+    link: https://www.swiss.com/CH/EN/fly/airport/lounges-zurich.html
+
+  - title: Geneva Lounge
+    lead-para: Feel pampered in the Geneva Lounge, for maximum comfort on your onward journey.
+    para: Kick back in the Geneva Lounge with personal service that always goes the extra mile. With the advantage of a short walk to your boarding gate, you’ll have plenty of time to enjoy a light meal before jetting off to your destination. If you’re on business, pop over to the E-Corner to catch up with your emails in peace. SWISS will happily cater to any needs you have.
+    link: https://www.swiss.com/ch/EN/fly/airport/lounges-geneva
+
+classes:
+
+  - title: Business
+    lead-para: Award-winning Business Class service is designed around your comfort and your needs, where functionality meets opulence.
+    para: With extra baggage allowance, access to exclusive lounges and priority boarding, as a Business Class passenger you’ll be on your way in no time. On board you’ll enjoy a range of Swiss specialities, all made from fresh regional ingredients. For extra privacy, your neighbouring seat will remain vacant as you explore a host of quality magazines and newspapers.
+    link: https://www.swiss.com/gb/en/fly/on-board/swiss-business
+
+  - title: Economy
+    lead-para: Economy doesn’t have to mean basic; with great SWISS hospitality, there’s no reason not to feel spoilt.
+    para: With easy check-in and comfortable seats with plenty of leg-room, there’s nothing to suggest you’re flying Economy. Included in each ticket price, a small snack or light meal with produce from Switzerland ensures great quality and authenticity. Economy still allows for plenty comfort in-flight, and SWISS is determined to ensure a relaxed and pleasant journey.
+    link: https://www.swiss.com/ch/EN/fly/on-board/swiss-economy
+---
+
+<div class="section bg--grey-lightest">
+  <div class="row row--padding row--xl text--center">
+    <p class="text--lg">{{page.intro}}</p>
+    <p class="title title--xs text--red">SWISS flights from £74 one-way*</p>
+    <a href="{{site.client.link}}" class="btn btn--red-outline">Book Now</a>
+  </div>
+</div>
+
+
+<div class="vpad--xxl">
+  <div class="row row--padding">
+    <div class="row text--center">
+      <div class="title title--line title--xl"><span class="title--line-wrap">Luxury lounges</span></div>
+    </div>
+    <div class="space--sm"></div>
+    {% for content in page.lounges %}
+      <div class="vpad--lg">
+        <div class="bob {% cycle: '', ' bob--swap' %}">
+          <div class="bob__image">
+            <a href="{{content.link}}"><div class="bg-img bg-img--travel" style="background-image: url('{{site.baseurl}}/img/content/travel/{{content.title | slugify}}.jpg');"></div></a>
+          </div>
+          <div class="bob__text">
+            <div class="title title--md text--red">{{content.title}}</div>
+            <p class="text--lg">{{content.lead-para}}</p>
+            <p>{{content.para}}</p>
+            <a href="{{content.link}}" class="btn btn--red-outline">Find Out More</a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="vpad--xxxl bg--ski-promo text--white text--center">
+  <div class="row row--xl row--padding">
+    <div class="title title--xl">Ski Equipment Flies For Free</div>
+    <p class="text--lg">Don’t fork out extra when going on a ski-holiday; fly with SWISS who understand your needs. Ski equipment flies for free<sup>*</sup>, making sure you have the best possible time in Switzerland’s famous resorts. As long as the equipment does not exceed your overall baggage allowance, there will be no extra cost incurred.</p>
+    <a href="{{site.client.link}}" class="btn btn--red">Book now</a>
+  </div>
+</div>
+
+
+<div class="vpad--xxl">
+  <div class="row row--padding">
+    <div class="row text--center">
+      <div class="title title--line title--xl"><span class="title--line-wrap">Taking Off</span></div>
+    </div>
+    <div class="space--sm"></div>
+    {% for content in page.classes %}
+      <div class="vpad--lg">
+        <div class="bob {% cycle: '', ' bob--swap' %}">
+          <div class="bob__image">
+            <a href="{{content.link}}"><div class="bg-img bg-img--4-3" style="background-image: url('{{site.baseurl}}/img/content/travel/{{content.title | slugify}}.jpg');"></div></a>
+          </div>
+          <div class="bob__text">
+            <div class="title title--md text--red">{{content.title}}</div>
+            <p class="text--lg">{{content.lead-para}}</p>
+            <p>{{content.para}}</p>
+            <a href="{{content.link}}" class="btn btn--red-outline">Find Out More</a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
