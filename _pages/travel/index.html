@@ -34,7 +34,7 @@ classes:
   <div class="row row--padding row--xl text--center">
     <p class="text--lg">{{page.intro}}</p>
     <p class="title title--xs text--red">SWISS flights from £74 one-way*</p>
-    <a href="{{site.client.link}}" class="btn btn--red-outline">Book Now</a>
+    <a href="{{site.client.link}}" class="btn btn--red-outline" id="tracking-swiss-intro-btn">Book Now</a>
   </div>
 </div>
 
@@ -49,13 +49,13 @@ classes:
       <div class="vpad--lg">
         <div class="bob {% cycle: '', ' bob--swap' %}">
           <div class="bob__image">
-            <a href="{{content.link}}"><div class="bg-img bg-img--travel" style="background-image: url('{{site.baseurl}}/img/content/travel/{{content.title | slugify}}.jpg');"></div></a>
+            <a href="{{content.link}}" id="tracking-swiss-{{content.title | slugify}}-img"><div class="bg-img bg-img--travel" style="background-image: url('{{site.baseurl}}/img/content/travel/{{content.title | slugify}}.jpg');"></div></a>
           </div>
           <div class="bob__text">
             <div class="title title--md text--red">{{content.title}}</div>
             <p class="text--lg">{{content.lead-para}}</p>
             <p>{{content.para}}</p>
-            <a href="{{content.link}}" class="btn btn--red-outline">Find Out More</a>
+            <a href="{{content.link}}" class="btn btn--red-outline" id="tracking-swiss-{{content.title | slugify}}-btn">Find Out More</a>
           </div>
         </div>
       </div>
@@ -67,7 +67,7 @@ classes:
   <div class="row row--xl row--padding">
     <div class="title title--xl">Ski Equipment Flies For Free</div>
     <p class="text--lg">Don’t fork out extra when going on a ski-holiday; fly with SWISS who understand your needs. Ski equipment flies for free<sup>*</sup>, making sure you have the best possible time in Switzerland’s famous resorts. As long as the equipment does not exceed your overall baggage allowance, there will be no extra cost incurred.</p>
-    <a href="{{site.client.link}}" class="btn btn--red">Book now</a>
+    <a href="{{site.client.link}}" class="btn btn--red" id="tracking-swiss-free-ski-btn">Book now</a>
   </div>
 </div>
 
@@ -82,13 +82,13 @@ classes:
       <div class="vpad--lg">
         <div class="bob {% cycle: '', ' bob--swap' %}">
           <div class="bob__image">
-            <a href="{{content.link}}"><div class="bg-img bg-img--4-3" style="background-image: url('{{site.baseurl}}/img/content/travel/{{content.title | slugify}}.jpg');"></div></a>
+            <a href="{{content.link}}" id="tracking-swiss-{{content.title | slugify}}-img"><div class="bg-img bg-img--4-3" style="background-image: url('{{site.baseurl}}/img/content/travel/{{content.title | slugify}}.jpg');"></div></a>
           </div>
           <div class="bob__text">
             <div class="title title--md text--red">{{content.title}}</div>
             <p class="text--lg">{{content.lead-para}}</p>
             <p>{{content.para}}</p>
-            <a href="{{content.link}}" class="btn btn--red-outline">Find Out More</a>
+            <a href="{{content.link}}" class="btn btn--red-outline" id="tracking-swiss-{{content.title | slugify}}-btn">Find Out More</a>
           </div>
         </div>
       </div>

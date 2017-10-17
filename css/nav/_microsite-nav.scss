@@ -18,6 +18,9 @@ $nav-width-bp:        400px;
   background-color: $white;
   background-color: rgba($white,.8);
   overflow: hidden;
+  
+  footer & { border-top: 1px solid $grey-lightest; }
+
   @include bp(md){
     height: $site-nav-height;
     line-height: $site-nav-height;

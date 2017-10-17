@@ -4,7 +4,7 @@ client:
   name: SWISS
   link: https://www.swiss.com/unitedkingdom/EN/swiss-the-skiers-airline-lon
 description: >
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  The snow-capped peaks of the Swiss Alps provide a winter-sports paradise, making Switzerland a premiere ski destination for hurtling down white-powder pistes.
 baseurl: "/swiss-ski" # the subpath of your site, e.g. /blog/
 url: "http://mp.secretescapes.com" # the base hostname & protocol for your site
 
