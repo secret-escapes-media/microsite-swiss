@@ -9,7 +9,7 @@ layout: default
   <div class="section bg--grey-lightest">
     <div class="row row--padding row--xl text--center">
       <p class="text--xl">{{page.intro}}</p>
-      <a href="{{site.client.link}}" class="btn btn--red-outline" id="tracking-resort-{{page.title|slugify}}-btn">Book Now</a>
+      <a href="{{page.tracked-link}}" class="btn btn--red-outline" id="tracking-resort-{{page.title|slugify}}-btn">Book Now</a>
     </div>
   </div>
 
@@ -33,3 +33,7 @@ layout: default
   {% include components/swiss-promo.html %}
 
 </div>
+
+
+
+{{ content }}
